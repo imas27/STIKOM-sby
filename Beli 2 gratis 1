@@ -1,0 +1,35 @@
+import java.io.*;
+
+public class soal1 {
+	public static void main (String args [])throws Exception
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		//inisialisasi
+		int  Jumlah_baju,bonus,total_item ;
+		
+		
+		//Mulai
+		System.out.println("[---------------------------------------------]");
+		System.out.println("			  Java Beli2Gratis1				 ");
+		System.out.println("");
+		System.out.println("");
+		System.out.print(" Masukan Jumlah Barang Yang Dibeli : ");
+		
+		Jumlah_baju = Integer.parseInt(br.readLine()); 
+		bonus = Jumlah_baju/2;
+		total_item = Jumlah_baju + bonus ;
+		
+		//keluaran
+		System.out.println(" Jumlah Bonus : " + bonus);
+		//Keluaran
+		System.out.println(" Total Barang Yang Dibawa Pulang : " + total_item );
+		//keluaran
+		System.out.println("");
+		System.out.println("");
+		System.out.println("--------------------------------------------");
+
+	
+	}
+	
+}
