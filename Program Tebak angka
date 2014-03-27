@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class soal2 {
+	public static void main (String args [])throws Exception
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int random,angka;
+		String jawaban;
+		
+		random = (int) (1+Math.random()*10) ;
+		
+		System.out.println("masukan angka anda");
+		angka= Integer.parseInt(br.readLine());
+		 
+		if(random==angka) 
+		{ 
+		   jawaban = "Tebakan anda Benar";
+		   System.out.println("Jawaban Anda"+jawaban);
+		} 
+		else  
+		{ 
+		   jawaban = "Tebakan Anda Salah";
+		   System.out.println("Jawaban Anda"+jawaban);
+		} 
+		 
+		System.out.println("Hasil random "+random);
+	}
+}
