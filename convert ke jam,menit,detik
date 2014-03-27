@@ -1,0 +1,21 @@
+import java.io.*;
+
+public class jam {
+	public static void main (String args [])throws Exception
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int detik1,detik2, jam, menit1, menit2;
+		System.out.print ("masukkan jumlah detik = ");
+		detik1 = Integer.parseInt(br.readLine());
+		
+		jam = detik1/3600;
+		menit1 = detik1%3600;
+		menit2 = menit1/60;
+		detik2 = menit1/60;
+		
+		System.out.println ("maka jam :" +jam);
+		System.out.println ("maka menit :" +menit2);
+		System.out.println ("maka detik :" +detik2);
+	}
+}
