@@ -1,0 +1,32 @@
+public class hari {
+	public static void main (String args [])throws Exception
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		 
+		 //inisialisasi
+		 int days, hours, minutes, total;
+		 
+		 
+		//Mulai
+		System.out.println("[---------------------------------------------]");
+		System.out.println("		convert ke detik			");
+		System.out.println("[---------------------------------------------]");
+		System.out.println("");
+		System.out.println("");
+		System.out.print("insert days 		:");
+		days = Integer.parseInt(br.readLine()); 
+		days = days*(24*3600);
+		System.out.print("insert hours 		:");
+		hours= Integer.parseInt(br.readLine()); 
+		hours = hours*3600;
+		System.out.print("insert minutes 		:");
+		minutes= Integer.parseInt(br.readLine()); 
+		minutes = minutes*60;
+		
+		
+		
+		total = days+hours+minutes;
+		
+		System.out.println("Maka jumlah detik adalah :" +total);
+	}
+}
