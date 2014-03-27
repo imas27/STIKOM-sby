@@ -1,0 +1,6 @@
+public class prgpertamax{
+	public static void main(String[]argx){
+	int a=100;
+	System.out.println(a);
+	}
+}
