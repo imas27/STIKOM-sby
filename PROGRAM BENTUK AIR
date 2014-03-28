@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class BentukAir {
+	public static void main(String [] args){
+	Scanner sc= new Scanner(System.in);
+	
+	System.out.print("Masukan temperatur (celcius) air  = ");
+	int suhu=sc.nextInt ();
+	
+	if(suhu<0){
+		System.out.println("Bentuk Air Padat");
+	}
+	else if ((suhu>=0)&&(suhu<100)){
+		System.out.println ("Bentuk Air menjadi cair");}
+		
+		else {
+		System.out.println ("Bentuk Air menjadi Gas");
+		}
+	}		
+}	
