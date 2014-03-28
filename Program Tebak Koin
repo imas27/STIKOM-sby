@@ -1,0 +1,25 @@
+import java.io.*;
+public class TebakKoin
+{
+public static void main (String[]argx) throws IOException 
+{
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		{
+			System.out.print("Pilih Angka atau Gambar [0 atau 1] = ");
+			int pilUcer = Integer.parseInt(br.readLine());
+			int pilPC = (pilUcer==1?0:1);
+			System.out.println("User Memilih : "+pilUcer);	
+			System.out.println("PC Memilih : " +pilPC);
+			int bilRandom = (int) (0+Math.random()*1);
+			System.out.println("Lempar koin. . . . . . = "+bilRandom);
+				
+			if(pilUcer==bilRandom)
+				{
+			System.out.println("User Menang");
+				}
+				else{
+			System.out.println("PC Menang");
+				}
+		}
+  }
+}	
