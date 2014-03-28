@@ -1,0 +1,38 @@
+import java.io.*;
+public class Loan123
+{
+ 	
+	public static void main(String [] args)throws Exception
+	{	
+		
+			BufferedReader br = new BufferedReader (new InputStreamReader(System.in)); 
+			
+			double interest_rate;
+			double year;
+			double loan_amount;
+			double payment_atas;
+			double payment_bawah;
+			
+			System.out.println("-------------------Imas-227---------------------");
+			System.out.println("	Computing Loan Payment	");
+			System.out.println("	(Penghitungan Pinjaman)	");
+			System.out.println("-------------------Imas-227---------------------");
+			System.out.println(" ");
+			System.out.println(" ");
+			System.out.println(" ");
+			
+			System.out.println("Masukkan interest rate (Suku Bunga):");
+			interest_rate = Double.parseDouble(br.readLine());
+			System.out.println("Masukkan number of year (Tahun Pelunasan):");
+			year = Double.parseDouble(br.readLine());
+			System.out.println("Masukkan loan amount(Jumlah Pinjaman):");
+			loan_amount = Double.parseDouble(br.readLine());
+			
+			
+			payment_atas = loan_amount*interest_rate;
+			payment_bawah = 1-(1/Math.pow(1+interest_rate,year*12));
+			
+			System.out.println(payment_atas/payment_bawah);
+			
+	}
+}
