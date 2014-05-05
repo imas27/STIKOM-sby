@@ -1,0 +1,119 @@
+STIKOM-sby
+==========
+
+my collage
+import java.io.*;
+
+class praktikum{
+	public static void main (String []args) throws Exception {
+		BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+		String tiket [][]=new String[3][5];
+		int pil = 0;
+		int jml_tiket[]=new int[3];
+		int tharga[]=new int[3];
+		int harga[]=new int[3];
+		
+		do
+		{
+			System.out.println ("====================================================");
+			System.out.println ("		Tiket Selling System				");
+			System.out.println ("		Super Junior Concert				");
+			System.out.println ("		Jln. Lombok No.23 Jakarta Pusat		");
+			System.out.println ("====================================================");
+			System.out.println ();
+			System.out.println ("1. Input Data Penjualan Tiket");
+			System.out.println ("2. Lihat Data Penjualan ");
+			System.out.println ("3. Keluar");
+			System.out.println ("Masukan No Pilihan Anda (1-3) :");
+			pil = Integer.parseInt(br.readLine());
+			
+			switch (pil)
+			{
+				case 1:
+				System.out.println ("====================================================");
+				System.out.println ("		Tiket Selling System				");
+				System.out.println ("		Super Junior Concert				");
+				System.out.println ("		Jln. Lombok No.23 Jakarta Pusat		");
+				System.out.println ("====================================================");
+				System.out.println ();
+				
+				for (int i=0;i<3;i++)
+				{
+					System.out.println (i+1+".");
+					System.out.println ("Nama Pembeli :");
+					tiket [i][0]= br.readLine();
+					System.out.println ("Alamat Pembeli :");
+					tiket [i][1]= br.readLine();
+					System.out.println ("No Telp Pembeli :");
+					tiket [i][2]= br.readLine();
+					do
+					{
+					System.out.println ("Kelas Tiket :");
+					tiket [i][3]= br.readLine();
+					System.out.println ("Jumlah Tiket Yang Dibeli :");
+					jml_tiket [i]= Integer.parseInt(br.readLine());
+					
+						if(tiket[i][3].equalsIgnoreCase("Super Box"))
+						{
+							harga[i] = 180;
+							tharga[i] = harga[i]*jml_tiket [i];
+							break;
+						}
+						else if (tiket[i][3].equalsIgnoreCase("Junior VIP"))
+						{
+							harga[i] = 150;
+							tharga[i] = harga[i]*jml_tiket [i];
+							break;
+						}
+						else  if (tiket[i][3].equalsIgnoreCase("Super VIP"))
+						{
+							harga[i] = 212;
+							tharga[i] = harga[i]*jml_tiket [i];
+							break;
+						}
+						else  if (tiket[i][3].equalsIgnoreCase("Super Sky Seat"))
+						{
+							harga[i] = 106;
+							tharga[i] = harga[i]*jml_tiket [i];
+							break;
+						}
+						else  if (tiket[i][3].equalsIgnoreCase("Junior Sky Seat"))
+						{
+							harga[i] = 53;
+							tharga[i] = harga[i]*jml_tiket [i];
+							break;
+						}
+						else
+						{
+						System.out.println ("Maaf untuk Sementara Kami tidak melayani rute tujuan tersebut.");
+						}
+					}while(true);
+				}break;
+				
+				case 2:
+				System.out.println ();
+				System.out.println ("====================================================");
+				System.out.println ("		Tiket Selling System				");
+				System.out.println ("		Super Junior Concert				");
+				System.out.println ("		Jln. Lombok No.23 Jakarta Pusat		");
+				System.out.println ("====================================================");
+				System.out.println ();
+				
+				for (int j=0;j<3;j++)
+				{
+					System.out.println (j+1+".");
+					System.out.println ("Nama Pembeli : " +tiket[j][0]);
+					System.out.println ("Alamat Pembeli : " +tiket[j][1]);
+					System.out.println ("No Telp : " +tiket[j][2]);
+					System.out.println ("Kelas Tiket : " +tiket[j][3]);
+					System.out.println ("Jumlah Tiket : " +jml_tiket[j]);
+					System.out.println ("Total Harga (USD): " +tharga[j]);
+				}
+				break;
+				
+				default :break;
+			}
+		}while(pil<3);
+	
+	}
+}
